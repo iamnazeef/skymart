@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import CartProductsTemplate from "./CartProductsTemplate";
-import EmptyCart from "../../assets/empty-cart-img/empty-cart.png";
+import EmptyCart from "../../assets/empty-cart-img/empty-cart.jpg";
 import Checkout from "./Checkout";
 import scrollToTop from "../ScrollToTop";
 import { cartContext } from "../../context/CartContext";

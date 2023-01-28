@@ -23,8 +23,8 @@ const Slides = () => {
   ];
 
   return (
-    <div className="slides rounded-full tablet:w-[50%] laptop:w-[60%] desktop:w-[70%]">
-      <div className="reserve_pick_up_delivery absolute tablet:relative laptop:hidden left-0 w-full bg-blue-100 text-gray-800 flex items-center justify-between py-3 px-4 shadow-md max-h-[58.8px] tablet:rounded-lg">
+    <div className="slides rounded-md tablet:w-[50%] laptop:w-[60%] desktop:w-[70%]">
+      <div className="reserve_pick_up_delivery absolute tablet:relative laptop:hidden left-0 w-full bg-blue-100 text-gray-800 flex items-center justify-between py-3 px-4 shadow-cardShadow max-h-[58.8px] tablet:rounded-lg">
         <p className="font-semibold text-sm">Reserve pickup or delivery</p>
         <button className="bg-white border border-black font-semibold text-gray-900 rounded-full py-[0.4rem] px-3 text-sm hover:border-2 min-w-[100.41px] max-w-[100.41px]">
           See times

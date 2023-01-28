@@ -90,6 +90,7 @@ const MainNavbar = ({ setShowNavbar }) => {
             autoComplete="off"
             value={searchQuery}
             onChange={(event) => setSearchQuery(event.target.value)}
+            onKeyDown={(e) => (e.code === "Enter" ? getSearchResults() : "")}
           />
           <button
             className="search-icon border border-yellow-300 bg-yellow-400 text-black rounded-full p-1 cursor-pointer"
@@ -129,7 +130,7 @@ const MainNavbar = ({ setShowNavbar }) => {
           aria-label="Navigate to cart"
           className="py-1 px-5 relative rounded-full hover:bg-blue-800"
         >
-          <div className="text-black font-semibold border border-orange-600 absolute right-4 min-h-[0.92rem] min-w-[0.92rem] text-center text-[0.6rem] bg-yellow-400 rounded-full">
+          <div className="text-black font-semibold border border-orange-600 absolute right-4 h-[0.92rem] w-[0.92rem] text-center text-[0.6rem] bg-yellow-400 rounded-full">
             {cartFunctions && cartFunctions.cartItems.size}
           </div>
           <ShoppingCartIcon />
