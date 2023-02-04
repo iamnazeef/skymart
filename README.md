@@ -1,4 +1,4 @@
-# skymart-ecommerce-store
+# Skymart
 Skymart is an online e-commerce store built with React JS, Tailwind CSS, and JavaScript. It includes features such as add to cart, product detailed view, pagination, search, and more.
 
 ## Technologies used
