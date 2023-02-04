@@ -1,6 +1,6 @@
 const EmailSubscription = () => {
   return (
-    <>
+    <section className="hidden tablet:block subscribe-to-emails bg-blue-100 mx-3 rounded-md py-3 px-4 text-sm max-w-[600px]">
       <p className="text-blue-800 font-semibold mb-2 text-base">
         Sign Up for Savings. New Arrivals, Alerts and More
       </p>
@@ -19,7 +19,7 @@ const EmailSubscription = () => {
           Sign Up
         </button>
       </form>
-    </>
+    </section>
   );
 };
 

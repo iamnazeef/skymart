@@ -34,7 +34,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="view-all-products">
+    <section className="view-all-products">
       <DisplayProducts
         isLoading={isLoading}
         productsArray={productsArray}
@@ -42,7 +42,7 @@ const Main = () => {
         filter={filter}
         setFilter={setFilter}
       />
-    </div>
+    </section>
   );
 };
 

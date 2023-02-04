@@ -5,8 +5,8 @@ import HelpCenterIcon from "./icons/ReturnsIcon";
 
 const FeedbackAndOrderInfo = () => {
   return (
-    <div className="FeedbackAndOrderInfo w-full bg-blue-100 rounded-lg text-center p-5 mb-10 max-w-[800px] mx-auto">
-      <div>
+    <section className="FeedbackAndOrderInfo w-full bg-blue-100 rounded-lg text-center p-5 mb-10 max-w-[800px] mx-auto">
+      <section>
         <p className="text-sm mb-5">We'd love to hear what you think!</p>
         <a
           href="#"
@@ -14,9 +14,9 @@ const FeedbackAndOrderInfo = () => {
         >
           Give feedback
         </a>
-      </div>
+      </section>
       <hr className="border border-blue-200 my-6" />
-      <div className="flex justify-center tablet:block">
+      <nav className="flex justify-center tablet:block">
         <ul className="flex flex-col items-center space-y-1 tablet:flex-row tablet:items-center tablet:justify-center w-full tablet:space-x-5">
           <li className="flex items-center justify-center space-x-2">
             <TrackOrdersIcon />
@@ -43,8 +43,8 @@ const FeedbackAndOrderInfo = () => {
             </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 };
 

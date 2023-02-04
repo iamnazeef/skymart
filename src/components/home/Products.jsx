@@ -34,7 +34,7 @@ const Products = ({
   }, []);
 
   return (
-    <div className="products">
+    <section className="products">
       {!isLoading && (
         <CategoriesTemplate
           category={category}
@@ -43,7 +43,7 @@ const Products = ({
           endpoint={endpoint}
         />
       )}
-    </div>
+    </section>
   );
 };
 

@@ -51,20 +51,20 @@ const Main = () => {
   }, [pid]);
 
   return (
-    <div className="mt-[125px] relative">
-      <div className="laptop:hidden">
+    <main className="mt-[125px] relative">
+      <section className="laptop:hidden">
         <MobileAndTabletView
           productDetails={productDetails}
           showSkeleton={showSkeleton}
         />
-      </div>
-      <div className="hidden laptop:block">
+      </section>
+      <section className="hidden laptop:block">
         <LaptopAndDesktopView
           productDetails={productDetails}
           showSkeleton={showSkeleton}
         />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

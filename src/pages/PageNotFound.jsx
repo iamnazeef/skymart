@@ -7,7 +7,7 @@ const PageNotFound = () => {
   useEffect(() => scrollToTop(), []);
 
   return (
-    <div className="page-not-found mt-10 min-h-[100vh] w-full flex flex-col items-center justify-center ">
+    <main className="page-not-found mt-10 min-h-[100vh] w-full flex flex-col items-center justify-center ">
       <img
         src={PageNotFoundJPG}
         className="w-full max-w-[500px] h-[280px] object-cover"
@@ -22,7 +22,7 @@ const PageNotFound = () => {
       >
         Take me home
       </Link>
-    </div>
+    </main>
   );
 };
 

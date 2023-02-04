@@ -1,7 +1,7 @@
 const ProductInStock = ({ productStock }) => {
   return (
     <>
-      <div className="stock mt-2 text-sm tablet:text-base font-normal">
+      <section className="stock mt-2 text-sm tablet:text-base font-normal">
         <p>
           Stock:{" "}
           <span
@@ -12,7 +12,7 @@ const ProductInStock = ({ productStock }) => {
             {productStock} left
           </span>
         </p>
-      </div>
+      </section>
     </>
   );
 };

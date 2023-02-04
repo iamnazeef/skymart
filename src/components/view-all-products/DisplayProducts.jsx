@@ -51,7 +51,7 @@ const DisplayProducts = ({ isLoading, productsArray, filter, setFilter }) => {
   }, [currentPage, productsArray]);
 
   return (
-    <div className="display-products min-h-screen">
+    <section className="display-products min-h-screen">
       <FormControl sx={{ minWidth: 150, m: 1, marginTop: 2 }} size="small">
         <InputLabel id="product-filtering">Filter</InputLabel>
         <Select
@@ -67,16 +67,18 @@ const DisplayProducts = ({ isLoading, productsArray, filter, setFilter }) => {
           <MenuItem value={4}>Popularity (Low to High)</MenuItem>
         </Select>
       </FormControl>
-      <div className="p-2 grid grid-cols-1 laptop:grid-cols-2 laptop:gap-x-3 w-full max-w-[1115px] mx-auto">
+      <section className="p-2 grid grid-cols-1 laptop:grid-cols-2 laptop:gap-x-3 w-full max-w-[1115px] mx-auto">
         {Array(20)
           .fill()
           .map((data, index) => (
-            <div key={index}>{isLoading && <SkeletonLoader cards={20} />}</div>
+            <section key={index}>
+              {isLoading && <SkeletonLoader cards={20} />}
+            </section>
           ))}
         {currentProducts.map((product) => (
           <GeneralProductsTemplate productDetails={product} key={product.id} />
         ))}
-      </div>
+      </section>
       {!isLoading && (
         <Paginate
           totalProducts={productsArray.length}
@@ -85,7 +87,7 @@ const DisplayProducts = ({ isLoading, productsArray, filter, setFilter }) => {
           currentPage={currentPage}
         />
       )}
-    </div>
+    </section>
   );
 };
 

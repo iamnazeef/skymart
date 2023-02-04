@@ -1,6 +1,6 @@
 const TabletFooter = () => {
   return (
-    <>
+    <nav className="details-and-summary hidden tablet:block p-3 laptop:hidden">
       <details className="border-b border-gray-800 mb-3">
         <summary className="mb-3 text-sm font-semibold cursor-pointer">
           Customer Service
@@ -123,7 +123,7 @@ const TabletFooter = () => {
           </li>
         </ul>
       </details>
-    </>
+    </nav>
   );
 };
 

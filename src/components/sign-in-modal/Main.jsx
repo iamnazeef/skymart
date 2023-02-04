@@ -26,7 +26,7 @@ const Main = () => {
   };
 
   return (
-    <div className="sign-in-modal">
+    <section className="sign-in-modal">
       <Modal
         open={isOpen}
         onClose={handleClose}
@@ -41,13 +41,13 @@ const Main = () => {
             autoComplete="off"
             className="border border-gray-200 shadow-sm p-3 rounded-md bg-white"
           >
-            <div className="header flex items-center justify-between">
+            <section className="header flex items-center justify-between">
               <h1 className="font-semibold text-3xl my-3 text-center">
                 Sign In
               </h1>
               <CloseIcon handleClose={handleClose} />
-            </div>
-            <div className="email-or-password flex flex-col">
+            </section>
+            <section className="email-or-password flex flex-col">
               <TextField
                 type="email"
                 label="Email"
@@ -78,8 +78,8 @@ const Main = () => {
                 error={!!errors?.password}
                 helperText={errors?.password ? errors.password.message : null}
               />
-            </div>
-            <div className="log-in-and-forgot-password text-center mt-3">
+            </section>
+            <section className="log-in-and-forgot-password text-center mt-3">
               <Button
                 type="submit"
                 variant="contained"
@@ -92,8 +92,8 @@ const Main = () => {
                   Forgotten password?
                 </p>
               </Link>
-            </div>
-            <div className="create-account text-center my-3">
+            </section>
+            <section className="create-account text-center my-3">
               <Button
                 variant="contained"
                 sx={{
@@ -105,11 +105,11 @@ const Main = () => {
               >
                 <p className="font-meidum text-sm">Create new account</p>
               </Button>
-            </div>
+            </section>
           </Box>
         </form>
       </Modal>
-    </div>
+    </section>
   );
 };
 

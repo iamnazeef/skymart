@@ -32,7 +32,7 @@ const Main = () => {
   }, [searchQueries]);
 
   return (
-    <div className="search-body min-h-screen pt-36 px-3">
+    <section className="search-body min-h-screen pt-36 px-3">
       <DisplayProducts
         products={products}
         setProducts={setProducts}
@@ -41,7 +41,7 @@ const Main = () => {
         filter={filter}
         setFilter={setFilter}
       />
-    </div>
+    </section>
   );
 };
 

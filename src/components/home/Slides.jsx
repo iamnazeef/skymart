@@ -23,14 +23,14 @@ const Slides = () => {
   ];
 
   return (
-    <div className="slides rounded-md tablet:w-[50%] laptop:w-[60%] desktop:w-[70%]">
-      <div className="reserve_pick_up_delivery absolute tablet:relative laptop:hidden left-0 w-full bg-blue-100 text-gray-800 flex items-center justify-between py-3 px-4 shadow-cardShadow max-h-[58.8px] tablet:rounded-lg">
+    <section className="slides rounded-md tablet:w-[50%] laptop:w-[60%] desktop:w-[70%]">
+      <section className="reserve_pick_up_delivery absolute tablet:relative laptop:hidden left-0 w-full bg-blue-100 text-gray-800 flex items-center justify-between py-3 px-4 shadow-cardShadow max-h-[58.8px] tablet:rounded-lg">
         <p className="font-semibold text-sm">Reserve pickup or delivery</p>
         <button className="bg-white border border-black font-semibold text-gray-900 rounded-full py-[0.4rem] px-3 text-sm hover:border-2 min-w-[100.41px] max-w-[100.41px]">
           See times
         </button>
-      </div>
-      <div className="slides_section pt-[5rem] flex overflow-auto space-x-2 p-1 tablet:pt-[.5rem] tablet:min-h-[420px] laptop:min-h-[440px]">
+      </section>
+      <section className="slides_section pt-[5rem] flex overflow-auto space-x-2 p-1 tablet:pt-[.5rem] tablet:min-h-[420px] laptop:min-h-[440px]">
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -49,7 +49,7 @@ const Slides = () => {
                 alt="clearance"
                 className="rounded-t-lg w-full min-h-[170px] max-h-[353px] object-cover tablet:min-h-full tablet:rounded-lg cursor-pointer"
               />
-              <div
+              <section
                 className={`offer details p-3 tablet:absolute tablet:top-0 ${
                   index == 4 || index == 1
                     ? "text-gray-800 tablet:text-white"
@@ -65,12 +65,12 @@ const Slides = () => {
                 <button className="border border-black font-semibold text-black rounded-full mt-12 tablet:mt-5 py-[0.4rem] px-3 text-sm bg-white laptop:text-base">
                   Shop now
                 </button>
-              </div>
+              </section>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

@@ -35,8 +35,8 @@ const MobileNavbar = ({ showNavbar, setShowNavbar }) => {
         showNavbar ? "translate-x-0" : "translate-x-[-100%]"
       } Navbar bg-white fixed z-20 top-0 w-full min-h-screen p-5 pt-14 transition-transform duration-[0.25s] ease-linear overflow-auto tablet:px-20 tablet:pt-20 text-gray-600`}
     >
-      <div className="header flex items-center space-x-5 justify-between">
-        <div className="flex items-center space-x-3">
+      <section className="header flex items-center space-x-5 justify-between">
+        <section className="flex items-center space-x-3">
           <img src={SkymartIcon} alt="Skymart logo" className="w-10" />
           <Link
             className="userAccount text-xs font-semibold text-white bg-blue-600 py-2 px-3 rounded-full hover:bg-blue-800"
@@ -44,12 +44,12 @@ const MobileNavbar = ({ showNavbar, setShowNavbar }) => {
           >
             Sign in or create account
           </Link>
-        </div>
-        <div onClick={handleNavbarClose}>
+        </section>
+        <section onClick={handleNavbarClose}>
           <CloseNavbarIcon />
-        </div>
-      </div>
-      <div className="body mt-12">
+        </section>
+      </section>
+      <section className="body mt-12">
         <Link
           to="/"
           className="text-base font-semibold bg-gradient-to-r bg-clip-text text-transparent from-pink-500 to-yellow-500"
@@ -101,24 +101,24 @@ const MobileNavbar = ({ showNavbar, setShowNavbar }) => {
         <ul className="flex flex-col space-y-6">
           <li>
             <Link to="/" className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+              <section className="flex items-center space-x-2">
                 <DepartmentsIcon />
                 <p className="text-sm">Departments</p>
-              </div>
-              <div>
+              </section>
+              <section>
                 <RightChevron />
-              </div>
+              </section>
             </Link>
           </li>
           <li>
             <Link to="/" className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+              <section className="flex items-center space-x-2">
                 <ServicesIcon />
                 <p className="text-sm">Services</p>
-              </div>
-              <div>
+              </section>
+              <section>
                 <RightChevron />
-              </div>
+              </section>
             </Link>
           </li>
         </ul>
@@ -127,7 +127,7 @@ const MobileNavbar = ({ showNavbar, setShowNavbar }) => {
           <GiveFeedbackIcon />
           <p className="text-sm">Give Feedback</p>
         </Link>
-      </div>
+      </section>
     </nav>
   );
 };

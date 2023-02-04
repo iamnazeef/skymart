@@ -40,7 +40,7 @@ const DisplayProducts = ({
     <>
       {products.length > 0 && (
         <>
-          <div className="product-details">
+          <section className="product-details">
             <p className="font-medium text-base laptop:text-lg laptop:mb-5 text-blue-800 mb-4">
               {`Showing ${products.length} ${
                 products.length === 1 ? "result" : "results"
@@ -61,16 +61,16 @@ const DisplayProducts = ({
                 <MenuItem value={4}>Popularity (Low to High)</MenuItem>
               </Select>
             </FormControl>
-          </div>
-          <div className="products grid grid-cols-1 laptop:grid-cols-2 laptop:gap-x-3 w-full max-w-[1115px] mx-auto">
+          </section>
+          <section className="products grid grid-cols-1 laptop:grid-cols-2 laptop:gap-x-3 w-full max-w-[1115px] mx-auto">
             {products.map((data, index) => (
               <GeneralProductsTemplate productDetails={data} key={index} />
             ))}
-          </div>
+          </section>
         </>
       )}
       {products.length <= 0 && (
-        <div className="h-[60vh] flex flex-col justify-center items-center">
+        <section className="h-[60vh] flex flex-col justify-center items-center">
           {isProductExist ? (
             <img src={LoadingGif} className="mx-auto w-[75px]" />
           ) : (
@@ -84,7 +84,7 @@ const DisplayProducts = ({
               ? "Loading..."
               : "Oh no! looks like we're fresh out of that product. But don't worry, we have plenty of other options! Check them out."}
           </p>
-        </div>
+        </section>
       )}
     </>
   );

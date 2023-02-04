@@ -1,7 +1,7 @@
 const ProductPopularity = () => {
   return (
     <>
-      <div className="p-3 flex items-start">
+      <section className="p-3 flex items-start">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-trending-up text-[#008000]"
@@ -21,7 +21,7 @@ const ProductPopularity = () => {
         <p className="ml-2 text-xs tablet:text-sm">
           1,000+ people ordered this in the last 7 days
         </p>
-      </div>
+      </section>
     </>
   );
 };

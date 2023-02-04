@@ -38,7 +38,7 @@ const MobileAndTabletView = ({ productDetails, showSkeleton }) => {
         productDetails.discountPercentage &&
         productDetails.stock &&
         productDetails.category && (
-          <div className="pt-3 tablet:px-10">
+          <section className="pt-3 tablet:px-10">
             <ProductImages
               productImages={productDetails.images || " "}
               productTitle={productDetails.title}
@@ -55,22 +55,22 @@ const MobileAndTabletView = ({ productDetails, showSkeleton }) => {
               }}
               titleAccess="Add to favourites"
             />
-            <div className="product-info p-3">
-              <div className="product-title-and-description">
+            <section className="product-info p-3">
+              <section className="product-title-and-description">
                 <h2 className="title font-semibold text-lg">
                   {productDetails.title || " "}
                 </h2>
                 <p className="description text-xs tablet:text-sm mt-1 w-full max-w-[600px] text-gray-600">
                   {productDetails.description || " "}
                 </p>
-              </div>
+              </section>
               <ProductRating productRating={productDetails.rating} />
               <ProductPrice
                 ProductPrice={productDetails.price}
                 productDiscount={productDetails.discountPercentage}
               />
               <ProductInStock productStock={productDetails.stock} />
-            </div>
+            </section>
             <ProductOfferDetails productPrice={productDetails.price} />
             <ProductPopularity />
             <ProductDescription
@@ -99,7 +99,7 @@ const MobileAndTabletView = ({ productDetails, showSkeleton }) => {
               theme="colored"
               className="mt-[7.5rem]"
             />
-          </div>
+          </section>
         )}
     </>
   );

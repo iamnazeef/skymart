@@ -1,6 +1,6 @@
 const MobileFooter = () => {
   return (
-    <>
+    <nav className="mobile-footer p-3 tablet:hidden">
       <ul className="text-[0.85rem] flex flex-col items-start space-y-3">
         <li className="hover:underline">
           <a href="#">Privacy and Security</a>
@@ -24,7 +24,7 @@ const MobileFooter = () => {
           <a href="#">Store Directory</a>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };
 

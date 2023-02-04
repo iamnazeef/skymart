@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const ProductImages = ({ productImages, productTitle }) => {
   return (
-    <div className="product-images w-full">
+    <section className="product-images w-full">
       {productImages && (
         <Swiper
           pagination={true}
@@ -34,7 +34,7 @@ const ProductImages = ({ productImages, productTitle }) => {
           ))}
         </Swiper>
       )}
-    </div>
+    </section>
   );
 };
 

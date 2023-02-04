@@ -35,35 +35,35 @@ const LaptopAndDesktopView = ({ productDetails, showSkeleton }) => {
         productDetails.discountPercentage &&
         productDetails.stock &&
         productDetails.category && (
-          <div className="laptop-and-desktop-view p-3 flex items-center w-full space-x-8 justify-center">
-            <div className="product-image--cart-and-buy pt-4 w-[50%] max-w-[500px] shadow-productShadow rounded-md self-start sticky top-36 p-3">
-              <div className="images">
+          <section className="laptop-and-desktop-view p-3 flex items-center w-full space-x-8 justify-center">
+            <section className="product-image--cart-and-buy pt-4 w-[50%] max-w-[500px] shadow-productShadow rounded-md self-start sticky top-36 p-3">
+              <section className="images">
                 <ProductImages
                   productImages={productDetails.images || " "}
                   productTitle={productDetails.title}
                 />
-              </div>
+              </section>
 
-              <div className="cart-and-buy pt-2">
+              <section className="cart-and-buy pt-2">
                 <CheckoutAndCart
                   productDetails={productDetails}
                   notify={notify}
                 />
-              </div>
-            </div>
+              </section>
+            </section>
 
-            <div className="product-details self-start mt-2 w-full max-w-[500px]">
+            <section className="product-details self-start mt-2 w-full max-w-[500px]">
               <h2 className="text-lg font-medium">{productDetails.title}</h2>
               <p className="text-sm mb-2">{productDetails.description}</p>
               <ProductRating productRating={productDetails.rating} />
-              <div className="product-price mt-2">
+              <section className="product-price mt-2">
                 <ProductPrice
                   ProductPrice={productDetails.price}
                   productDiscount={productDetails.discountPercentage}
                 />
-              </div>
+              </section>
 
-              <div className="offers pt-3">
+              <section className="offers pt-3">
                 <h3 className="font-medium text-black underline">
                   Get this for low as <span className="font-sans">₹</span>
                   {Math.floor(productDetails.price / 2)}
@@ -77,29 +77,29 @@ const LaptopAndDesktopView = ({ productDetails, showSkeleton }) => {
                   <span className="font-sans font-semibold">₹1000</span> Valid
                   once per Paytm account
                 </p>
-              </div>
+              </section>
 
-              <div className="stock mt-3 border border-gray-300 rounded-md w-fit">
+              <section className="stock mt-3 border border-gray-300 rounded-md w-fit">
                 <ProductPopularity />
-              </div>
+              </section>
 
-              <div className="stocks pt-3">
+              <section className="stocks pt-3">
                 <ProductInStock productStock={productDetails.stock} />
-              </div>
+              </section>
 
-              <div className="product-details mt-3 p-2 border-2 border-gray-300 w-full max-w-[420px] rounded-md">
+              <section className="product-details mt-3 p-2 border-2 border-gray-300 w-full max-w-[420px] rounded-md">
                 <ProductDescription
                   ProductDescription={productDetails.description}
                 />
-              </div>
+              </section>
 
-              <div className="similar-products">
+              <section className="similar-products">
                 <p className="p-3 text-sm tablet:text-base font-medium">
                   Similar Products
                 </p>
                 <SimilarProducts category={productDetails.category} />
-              </div>
-            </div>
+              </section>
+            </section>
             <ToastContainer
               position="bottom-center"
               autoClose={1500}
@@ -112,7 +112,7 @@ const LaptopAndDesktopView = ({ productDetails, showSkeleton }) => {
               pauseOnHover={false}
               theme="colored"
             />
-          </div>
+          </section>
         )}
     </>
   );

@@ -40,7 +40,7 @@ const MainNavbar = ({ setShowNavbar }) => {
   };
 
   return (
-    <div className="Main-Navbar z-20 flex space-x-2 p-4 items-center justify-center">
+    <section className="Main-Navbar z-20 flex space-x-2 p-4 items-center justify-center">
       <MenuIcon handleNavbar={handleNavbar} />
       <Link
         to="/"
@@ -52,97 +52,107 @@ const MainNavbar = ({ setShowNavbar }) => {
         </h1>
         <img src={SkymartIcon} alt="Logo of Skymart" className="max-w-[40px]" />
       </Link>
-      <nav className="nav relative flex items-center justify-between space-x-2 w-full">
-        <Link
-          to="/"
-          aria-label="Navigate to departments"
-          className="departments hidden laptop:flex items-center space-x-1 p-4 rounded-full hover:bg-blue-800"
-        >
-          <DepartmentsIcon />
-          <p>Departments</p>
-        </Link>
-        <Link
-          to="/"
-          aria-label="Navigate to services"
-          className="services hidden laptop:flex items-center space-x-1 p-4 rounded-full hover:bg-blue-800"
-        >
-          <ServicesIcon />
-          <p>Services</p>
-        </Link>
-        <div
-          className={`search flex rounded-full bg-white p-[0.3rem] w-full ${
-            active ? "absolute z-10 left-0" : "relative"
-          }`}
-          onFocus={() => {
-            if (window.screen.width < 600) setActive(true);
-          }}
-          onBlur={() => setActive(false)}
-        >
-          <input
-            type="search"
-            placeholder={`${
-              window.screen.width < 1280
-                ? "Search Skymart"
-                : "Search everything at Skymart online and in store"
+      <nav className="nav w-full">
+        <ul className="nav relative flex items-center justify-between space-x-2 w-full">
+          <li>
+            <Link
+              to="/"
+              aria-label="Navigate to departments"
+              className="departments hidden laptop:flex items-center space-x-1 p-4 rounded-full hover:bg-blue-800"
+            >
+              <DepartmentsIcon />
+              <p>Departments</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              aria-label="Navigate to services"
+              className="services hidden laptop:flex items-center space-x-1 p-4 rounded-full hover:bg-blue-800"
+            >
+              <ServicesIcon />
+              <p>Services</p>
+            </Link>
+          </li>
+          <li
+            className={`search flex rounded-full bg-white p-[0.3rem] w-full ${
+              active ? "absolute z-10 left-0" : "relative"
             }`}
-            className="rounded-full w-full p-1 outline-none text-black placeholder:text-sm placeholder:text-gray-500 desktop:px-3"
-            id="search"
-            autoComplete="off"
-            value={searchQuery}
-            onChange={(event) => setSearchQuery(event.target.value)}
-            onKeyDown={(e) => (e.code === "Enter" ? getSearchResults() : "")}
-          />
-          <button
-            className="search-icon border border-yellow-300 bg-yellow-400 text-black rounded-full p-1 cursor-pointer"
-            aria-label="Nearch"
-            onClick={() => {
-              if (searchQuery) {
-                getSearchResults();
-                setActive(false);
-              }
+            onFocus={() => {
+              if (window.screen.width < 600) setActive(true);
             }}
+            onBlur={() => setActive(false)}
           >
-            <SearchIcon />
-          </button>
-        </div>
-        <Link
-          to="/"
-          aria-label="Navigate to reorder products"
-          className="reorder hidden laptop:flex items-center space-x-2 p-3 rounded-full min-w-[120px] ml-3 hover:bg-blue-800"
-        >
-          <FavouritesIcon />
-          <p className="text-xs">
-            Reorder <br /> <span className="font-semibold">My Items</span>
-          </p>
-        </Link>
-        <Link
-          onClick={handleSignIn}
-          aria-label="Nign in or login in to skymart"
-          className="account hidden laptop:flex items-center p-3 w-[120px] rounded-full space-x-2 hover:bg-blue-800"
-        >
-          <UserIcon />
-          <p className="text-xs">
-            Sign In <span className="font-semibold">Account</span>
-          </p>
-        </Link>
-        <Link
-          to={"/cart"}
-          aria-label="Navigate to cart"
-          className="py-1 px-5 relative rounded-full hover:bg-blue-800"
-        >
-          <div className="text-black font-semibold border border-orange-600 absolute right-4 h-[0.92rem] w-[0.92rem] text-center text-[0.6rem] bg-yellow-400 rounded-full">
-            {cartFunctions && cartFunctions.cartItems.size}
-          </div>
-          <ShoppingCartIcon />
-          <p className="text-white text-[0.6rem] text-center">
-            <span className="font-sans">₹</span>
-            {cartFunctions && cartFunctions.totalPrice > 0
-              ? cartFunctions.totalPrice
-              : "0.00"}
-          </p>
-        </Link>
+            <input
+              type="search"
+              placeholder={`${
+                window.screen.width < 1280
+                  ? "Search Skymart"
+                  : "Search everything at Skymart online and in store"
+              }`}
+              className="rounded-full w-full p-1 outline-none text-black placeholder:text-sm placeholder:text-gray-500 desktop:px-3"
+              id="search"
+              autoComplete="off"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              onKeyDown={(e) => (e.code === "Enter" ? getSearchResults() : "")}
+            />
+            <button
+              className="search-icon border border-yellow-300 bg-yellow-400 text-black rounded-full p-1 cursor-pointer"
+              aria-label="Nearch"
+              onClick={() => {
+                if (searchQuery) {
+                  getSearchResults();
+                  setActive(false);
+                }
+              }}
+            >
+              <SearchIcon />
+            </button>
+          </li>
+          <li>
+            <Link
+              to="/"
+              aria-label="Navigate to reorder products"
+              className="reorder hidden laptop:flex items-center space-x-2 p-3 rounded-full min-w-[120px] ml-3 hover:bg-blue-800"
+            >
+              <FavouritesIcon />
+              <p className="text-xs">
+                Reorder <br /> <span className="font-semibold">My Items</span>
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={handleSignIn}
+              aria-label="Nign in or login in to skymart"
+              className="account hidden laptop:flex items-center p-3 w-[120px] rounded-full space-x-2 hover:bg-blue-800"
+            >
+              <UserIcon />
+              <p className="text-xs">
+                Sign In <span className="font-semibold">Account</span>
+              </p>
+            </Link>
+          </li>
+          <Link
+            to={"/cart"}
+            aria-label="Navigate to cart"
+            className="py-1 px-5 relative rounded-full hover:bg-blue-800"
+          >
+            <section className="text-black font-semibold border border-orange-600 absolute right-4 h-[0.92rem] w-[0.92rem] text-center text-[0.6rem] bg-yellow-400 rounded-full">
+              {cartFunctions && cartFunctions.cartItems.size}
+            </section>
+            <ShoppingCartIcon />
+            <p className="text-white text-[0.6rem] text-center">
+              <span className="font-sans">₹</span>
+              {cartFunctions && cartFunctions.totalPrice > 0
+                ? cartFunctions.totalPrice
+                : "0.00"}
+            </p>
+          </Link>
+        </ul>
       </nav>
-    </div>
+    </section>
   );
 };
 

@@ -9,11 +9,12 @@ const ProductsTemplate = ({ productDetails }) => {
       to={`/product_details/${productDetails.id}`}
       className="border my-1 border-gray-400 rounded-md laptop:shadow-none hover:shadow-productShadow snap-start h-[220px] min-w-[155px] max-w-[155px] p-[0.30rem] tablet:h-[245px] tablet:min-w-[165px] tablet:max-w-[165px] laptop:h-[260px] laptop:min-w-[180px] laptop:max-w-[180px]"
     >
-      <div className="product-image rounded-md h-[50%] relative">
+      <section className="product-image rounded-md h-[50%] relative">
         <img
           src={productDetails.thumbnail}
           className="h-[100%] w-[100%] object-cover rounded-[0.160rem]"
           alt={`A picture of ${productDetails.title}`}
+          loading="lazy"
         />
         <button
           onClick={(event) => {
@@ -25,14 +26,14 @@ const ProductsTemplate = ({ productDetails }) => {
         >
           Options
         </button>
-      </div>
-      <div className="product-details rounded-md h-[50%] mt-2">
-        <div className="product-name">
+      </section>
+      <section className="product-details rounded-md h-[50%] mt-2">
+        <section className="product-name">
           <h3 className="max-h-[35px] tablet:max-h-[40px] overflow-auto text-sm font-medium tablet:text-[0.980rem] shadow-fadeShadow">
             {productDetails.title}
           </h3>
-        </div>
-        <div className="product-rating flex items-center justify-between mt-2 mb-1">
+        </section>
+        <section className="product-rating flex items-center justify-between mt-2 mb-1">
           <Stack spacing={1}>
             <Rating
               name="half-rating-read"
@@ -60,8 +61,8 @@ const ProductsTemplate = ({ productDetails }) => {
               console.log("added to favourite");
             }}
           />
-        </div>
-        <div className="price flex flex-wrap items-center mt-1 tablet:mt-2 justify-between px-[0.15rem]">
+        </section>
+        <section className="price flex flex-wrap items-center mt-1 tablet:mt-2 justify-between px-[0.15rem]">
           <p className="text-green-700 font-semibold tablet:text-lg laptop:text-xl">
             {productDetails.discountPercentage}%
           </p>
@@ -72,8 +73,8 @@ const ProductsTemplate = ({ productDetails }) => {
                 (productDetails.price * productDetails.discountPercentage) / 100
             )}
           </p>
-        </div>
-      </div>
+        </section>
+      </section>
     </Link>
   );
 };

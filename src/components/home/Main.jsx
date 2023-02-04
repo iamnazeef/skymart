@@ -46,11 +46,11 @@ const Main = () => {
   ];
 
   return (
-    <div className="home-container px-3 tablet:px-12 laptop:px-[4rem] mt-[7.6rem] tablet:mt-[8.5rem] min-w-full">
-      <div className="tablet:flex tablet:space-x-3">
+    <section className="home-container px-3 tablet:px-12 laptop:px-[4rem] mt-[7.6rem] tablet:mt-[8.5rem] min-w-full">
+      <section className="tablet:flex tablet:space-x-3">
         <Slides />
         <FlashPicks />
-      </div>
+      </section>
       <SpecialOffers />
       <SkymartPlus />
 
@@ -67,7 +67,7 @@ const Main = () => {
       {Array(categoriesAndEndpoints.length)
         .fill()
         .map((data, index) => (
-          <div key={index}>
+          <section key={index}>
             {isLoading && <SkeletonLoader cards={20} />}
             <Products
               category={categoriesAndEndpoints[index].categoryHeading}
@@ -76,11 +76,11 @@ const Main = () => {
               isClearanceSale={false}
               endpoint={categoriesAndEndpoints[index].endpoint}
             />
-          </div>
+          </section>
         ))}
 
       <FeedbackAndOrderInfo />
-    </div>
+    </section>
   );
 };
 

@@ -13,22 +13,22 @@ const CartProductsTemplate = ({ productId }) => {
 
   return (
     <>
-      <div className="image h-[105px] w-full mt-2 flex items-center relative rounded-md tablet:max-w-[300px] mx-auto tablet:border tablet:border-gray-700 tablet:p-1 tablet:min-h-[150px]">
-        <div className="product-image w-[35%] h-[100px]">
+      <section className="image h-[105px] w-full mt-2 flex items-center relative rounded-md tablet:max-w-[300px] mx-auto tablet:border tablet:border-gray-700 tablet:p-1 tablet:min-h-[150px]">
+        <section className="product-image w-[35%] h-[100px]">
           <img
             src={cartItems.get(productId).thumbnail}
             className="h-[100px] w-full object-contain rounded-tl-md rounded-bl-md"
             alt={cartItems.get(productId).title}
           />
-        </div>
-        <div className="product-details w-[65%] h-[100px] rounded-tr-md rounded-br-md relative p-2">
-          <div className="product-title">
+        </section>
+        <section className="product-details w-[65%] h-[100px] rounded-tr-md rounded-br-md relative p-2">
+          <section className="product-title">
             <h2 className="text-sm font-medium">
               {cartItems.get(productId).title}
             </h2>
-          </div>
-          <div className="quantity-and-price flex items-center flex-wrap justify-between h-[70px]">
-            <div className="quantity flex items-center space-x-2 border border-gray-600 rounded-md bg-gray-100 p-[0.10rem]">
+          </section>
+          <section className="quantity-and-price flex items-center flex-wrap justify-between h-[70px]">
+            <section className="quantity flex items-center space-x-2 border border-gray-600 rounded-md bg-gray-100 p-[0.10rem]">
               <button onClick={() => handleUpdate(productId, false)}>
                 <MinusIcon />
               </button>
@@ -53,8 +53,8 @@ const CartProductsTemplate = ({ productId }) => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-            </div>
-            <div className="price flex items-center space-x-2">
+            </section>
+            <section className="price flex items-center space-x-2">
               <p className="original-price text-base text-gray-700 line-through font-normal">
                 <span className="font-sans">₹</span>
                 {cartItems.get(productId).price *
@@ -65,10 +65,10 @@ const CartProductsTemplate = ({ productId }) => {
                 {cartItems.get(productId).discountPrice *
                   cartItems.get(productId).quantity}
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </section>
+          </section>
+        </section>
+      </section>
       <hr className="h-1 mt-2 border-gray-400 mx-auto w-full max-w-[90%] tablet:hidden" />
     </>
   );

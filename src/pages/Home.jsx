@@ -2,9 +2,9 @@ import Main from "../components/home/Main";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <main className="Home">
       <Main />
-    </div>
+    </main>
   );
 };
 

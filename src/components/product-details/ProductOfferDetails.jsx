@@ -1,6 +1,6 @@
 const ProductOfferDetails = ({ productPrice }) => {
   return (
-    <div className="border border-gray-200 cursor-pointer">
+    <section className="border border-gray-200 cursor-pointer">
       <details className="text-sm tablet:text-base w-full p-3">
         <summary>
           Get this for low as <span className="font-sans">₹</span>
@@ -14,7 +14,7 @@ const ProductOfferDetails = ({ productPrice }) => {
           Paytm account
         </p>
       </details>
-    </div>
+    </section>
   );
 };
 

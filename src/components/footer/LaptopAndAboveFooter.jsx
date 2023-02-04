@@ -1,7 +1,7 @@
 const LaptopAndAboveFooter = () => {
   return (
-    <>
-      <div className="customer-service">
+    <nav className="hidden laptop:flex items-start space-x-10 p-3">
+      <section className="customer-service">
         <p className="font-semibold text-sm mb-2">Customer Service</p>
         <ul className="flex flex-col items-start space-y-3 text-[0.8rem] mb-3">
           <li className="hover:underline">
@@ -29,8 +29,8 @@ const LaptopAndAboveFooter = () => {
             <a href="#">Tax Exempt Program</a>
           </li>
         </ul>
-      </div>
-      <div>
+      </section>
+      <section>
         <p className="font-semibold text-sm mb-2">Skymart Services</p>
         <ul className="flex flex-col items-start space-y-3 text-[0.8rem] mb-3">
           <li className="hover:underline">
@@ -67,8 +67,8 @@ const LaptopAndAboveFooter = () => {
             <a href="#">Other Services</a>
           </li>
         </ul>
-      </div>
-      <div>
+      </section>
+      <section>
         <p className="font-semibold mb-2">Stores</p>
         <ul className="flex flex-col items-start space-y-3 text-[0.8rem] mb-3">
           <li className="hover:underline">
@@ -87,8 +87,8 @@ const LaptopAndAboveFooter = () => {
             <a href="#">Covid-19 Vaccine Scheduler</a>
           </li>
         </ul>
-      </div>
-      <div className="get-to-know-us-and-partner-with-us">
+      </section>
+      <section className="get-to-know-us-and-partner-with-us">
         <p className="font-semibold mb-2 text-sm">Get to Know Us</p>
         <ul className="flex flex-col items-start space-y-3 text-[0.8rem] mb-3">
           <li className="hover:underline">
@@ -110,10 +110,10 @@ const LaptopAndAboveFooter = () => {
             <a href="#">Advertise with Us</a>
           </li>
         </ul>
-      </div>
-      <div className="download-app hidden tablet:block p-3 mt-5 laptop:mt-0">
+      </section>
+      <section className="download-app hidden tablet:block p-3 mt-5 laptop:mt-0">
         <p className="text-sm font-semibold">Download Our App</p>
-        <div className="where-to-download flex items-center space-x-2 mt-2">
+        <section className="where-to-download flex items-center space-x-2 mt-2">
           <a href="#">
             <img
               src="https://lh3.googleusercontent.com/q1k2l5CwMV31JdDXcpN4Ey7O43PxnjAuZBTmcHEwQxVuv_2wCE2gAAQMWxwNUC2FYEOnYgFPOpw6kmHJWuEGeIBLTj9CuxcOEeU8UXyzWJq4NJM3lg=s0"
@@ -128,9 +128,9 @@ const LaptopAndAboveFooter = () => {
               className="w-28"
             />
           </a>
-        </div>
-      </div>
-    </>
+        </section>
+      </section>
+    </nav>
   );
 };
 

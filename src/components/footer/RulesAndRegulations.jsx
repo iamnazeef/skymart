@@ -1,6 +1,6 @@
 const RulesAndRegulations = () => {
   return (
-    <>
+    <nav className="hidden tablet:block p-3">
       <ul className="flex text-[0.65rem] space-x-2 flex-wrap">
         <li className="hover:underline">
           <a href="#">Terms of Use</a>
@@ -21,7 +21,7 @@ const RulesAndRegulations = () => {
           <a href="#">Request My Personal Information</a>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };
 

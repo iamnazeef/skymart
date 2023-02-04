@@ -27,7 +27,7 @@ const CheckoutAndCart = ({ productDetails, notify }) => {
   };
 
   return (
-    <div className="checkout-and-cart text-white my-2 flex items-center justify-center m-auto tablet:w-[90%] sticky bottom-0 tablet:bottom-2 tablet:space-x-3 z-10">
+    <section className="checkout-and-cart text-white my-2 flex items-center justify-center m-auto tablet:w-[90%] sticky bottom-0 tablet:bottom-2 tablet:space-x-3 z-10">
       <button
         className="add-to-cart w-[50%] bg-yellow-400 hover:bg-yellow-500 p-3 flex items-center justify-center space-x-1 tablet:rounded-md cursor-pointer hover:shadow-productShadow"
         onClick={() => handleCart(productDetails.id, productDetails)}
@@ -74,7 +74,7 @@ const CheckoutAndCart = ({ productDetails, notify }) => {
         </svg>
         <p>Buy Now</p>
       </button>
-    </div>
+    </section>
   );
 };
 

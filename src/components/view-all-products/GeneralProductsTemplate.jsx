@@ -17,14 +17,15 @@ const GeneralProductsTemplate = ({ productDetails }) => {
   };
 
   return (
-    <div
+    <section
       className="products p-1 border border-gray-400 h-[140px] w-full max-w-[500px] mb-3 rounded-md flex space-x-2 mx-auto cursor-pointer tablet:h-[190px]  tablet:max-w-[640px] tablet:mb-5 laptop:h-[250px] laptop:max-w-[500px] laptop:shadow-none hover:shadow-productShadow"
       onClick={handleToDetailedProductPage}
     >
-      <div className="product-image relative w-[40%] laptop:max-w-[40%] rounded-md">
+      <section className="product-image relative w-[40%] laptop:max-w-[40%] rounded-md">
         <img
           src={productDetails.thumbnail}
           className="h-[100%] w-[100%] object-contain"
+          loading="lazy"
         />
         <button
           className="bg-blue-600 rounded-full p-1 absolute top-0 hover:bg-blue-700 laptop:shadow-cardShadow"
@@ -55,13 +56,13 @@ const GeneralProductsTemplate = ({ productDetails }) => {
             Options
           </p>
         </button>
-      </div>
-      <div className="product-details w-[60%] laptop:max-w-[60%] rounded-md overflow-wrap mt-2">
-        <div className="product-title flex justify-between">
+      </section>
+      <section className="product-details w-[60%] laptop:max-w-[60%] rounded-md overflow-wrap mt-2">
+        <section className="product-title flex justify-between">
           <h3 className="font-medium max-h-[30px] tablet:max-h-[40px] tablet:text-lg overflow-auto w-full laptop:max-h-[60px] laptop:text-xl">
             {productDetails.title}
           </h3>
-          <div
+          <section
             className="tablet:hidden"
             onClick={(event) => {
               event.preventDefault();
@@ -73,9 +74,9 @@ const GeneralProductsTemplate = ({ productDetails }) => {
               className="add-to-favourite cursor-pointer"
               style={{ color: "black", fontSize: "1.5rem" }}
             />
-          </div>
-        </div>
-        <div className="rating mt-1 tablet:flex tablet:items-center tablet:space-x-3">
+          </section>
+        </section>
+        <section className="rating mt-1 tablet:flex tablet:items-center tablet:space-x-3">
           <Stack spacing={1}>
             <Rating
               name="half-rating-read"
@@ -92,7 +93,7 @@ const GeneralProductsTemplate = ({ productDetails }) => {
               }}
             />
           </Stack>
-          <div className="hidden tablet:block">
+          <section className="hidden tablet:block">
             <FavoriteBorderIcon
               className="add-to-favourite cursor-pointer"
               style={{ color: "black", fontSize: "1.5rem" }}
@@ -101,12 +102,12 @@ const GeneralProductsTemplate = ({ productDetails }) => {
                 console.log("added to favourite");
               }}
             />
-          </div>
-        </div>
-        <div className="description h-[38px] overflow-auto tablet:h-[45px] mt-1 border-b laptop:h-[50px] laptop:mt-2">
+          </section>
+        </section>
+        <section className="description h-[38px] overflow-auto tablet:h-[45px] mt-1 border-b laptop:h-[50px] laptop:mt-2">
           <p className="text-xs tablet:text-sm">{productDetails.description}</p>
-        </div>
-        <div className="price flex flex-wrap items-center space-x-1 mt-1 tablet:mt-2">
+        </section>
+        <section className="price flex flex-wrap items-center space-x-1 mt-1 tablet:mt-2">
           <p className="text-green-600 font-semibold tablet:text-lg laptop:text-xl">
             {productDetails.discountPercentage}%
           </p>
@@ -121,9 +122,9 @@ const GeneralProductsTemplate = ({ productDetails }) => {
                 (productDetails.price * productDetails.discountPercentage) / 100
             )}
           </p>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
   );
 };
 

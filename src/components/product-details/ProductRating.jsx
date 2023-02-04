@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 const ProductRating = ({ productRating }) => {
   return (
     <>
-      <div className="product-rating flex items-center">
+      <section className="product-rating flex items-center">
         <Stack spacing={1} className="my-2">
           <Rating
             name="half-rating-read"
@@ -27,7 +27,7 @@ const ProductRating = ({ productRating }) => {
         >
           {productRating}
         </span>
-      </div>
+      </section>
     </>
   );
 };

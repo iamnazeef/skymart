@@ -18,7 +18,7 @@ const SimilarProducts = ({ category }) => {
   }, []);
 
   return (
-    <div className="flex mx-3 space-x-3 overflow-auto snap-x">
+    <section className="flex mx-3 space-x-3 overflow-auto snap-x">
       {products &&
         products.map((productDetails) => (
           <ProductsTemplate
@@ -27,7 +27,7 @@ const SimilarProducts = ({ category }) => {
             key={productDetails.id}
           />
         ))}
-    </div>
+    </section>
   );
 };
 
