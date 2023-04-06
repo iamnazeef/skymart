@@ -1,7 +1,7 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useEffect } from "react";
 import { useState } from "react";
-import discountedPrice from "../discountedPrice";
+import discountedPrice from "../../utils/discountedPrice";
 import Paginate from "../paginate/Main";
 import GeneralProductsTemplate from "./GeneralProductsTemplate";
 import SkeletonLoader from "./SkeletonLoader";

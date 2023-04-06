@@ -2,7 +2,7 @@ import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useEffect } from "react";
-import scrollToTop from "../ScrollToTop";
+import scrollToTop from "../../utils/ScrollToTop";
 import { useNavigate } from "react-router-dom";
 
 const GeneralProductsTemplate = ({ productDetails }) => {
@@ -26,6 +26,7 @@ const GeneralProductsTemplate = ({ productDetails }) => {
           src={productDetails.thumbnail}
           className="h-[100%] w-[100%] object-contain"
           loading="lazy"
+          alt={`image of ${productDetails.title}`}
         />
         <button
           className="bg-blue-600 rounded-full p-1 absolute top-0 hover:bg-blue-700 laptop:shadow-cardShadow"

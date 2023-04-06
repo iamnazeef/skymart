@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageNotFoundJPG from "../assets/page-not-found/page-not-found.jpg";
-import scrollToTop from "../components/ScrollToTop";
+import scrollToTop from "../utils/ScrollToTop";
 
 const PageNotFound = () => {
   useEffect(() => scrollToTop(), []);
@@ -11,6 +11,7 @@ const PageNotFound = () => {
       <img
         src={PageNotFoundJPG}
         className="w-full max-w-[500px] h-[280px] object-cover"
+        alt="placeholder image"
       />
       <em className="w-full max-w-[500px] px-5 text-xs tablet:text-sm">
         Oops, looks like you've taken a detour to nowhere. But don't worry, we

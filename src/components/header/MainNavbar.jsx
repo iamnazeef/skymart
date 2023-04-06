@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import SkymartIcon from "/favicon/cloudy.png";
-import scrollToTop from "../ScrollToTop";
+import scrollToTop from "../../utils/ScrollToTop";
 import { useContext, useState } from "react";
 import { cartContext } from "../../context/CartContext";
 import { signInContext } from "../../context/SignInModalContext";
@@ -44,7 +44,7 @@ const MainNavbar = ({ setShowNavbar }) => {
       <MenuIcon handleNavbar={handleNavbar} />
       <Link
         to="/"
-        className="laptop:flex laptop:items-center laptop:space-x-3 hover:bg-blue-800 laptop:py-2 laptop:px-4 laptop:rounded-full"
+        className="laptop:flex laptop:items-center laptop:space-x-3 hover:bg-blue-800 laptop:py-2 laptop:px-4 rounded-full"
         onClick={handleLogoClick}
       >
         <h1 className="hidden laptop:block laptop:text-[1.35rem] laptop:font-semibold">

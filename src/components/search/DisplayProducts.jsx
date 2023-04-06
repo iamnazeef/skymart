@@ -2,7 +2,7 @@ import GeneralProductsTemplate from "../view-all-products/GeneralProductsTemplat
 import LoadingGif from "../../assets/loading-gif/loading-gif.gif";
 import NoProducts from "../../assets/no-products/no-products.webp";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import discountedPrice from "../discountedPrice";
+import discountedPrice from "../../utils/discountedPrice";
 
 const DisplayProducts = ({
   products,
@@ -72,11 +72,12 @@ const DisplayProducts = ({
       {products.length <= 0 && (
         <section className="h-[60vh] flex flex-col justify-center items-center">
           {isProductExist ? (
-            <img src={LoadingGif} className="mx-auto w-[75px]" />
+            <img src={LoadingGif} className="mx-auto w-[75px]" alt="loading..." />
           ) : (
             <img
               src={NoProducts}
               className="rounded-md mb-2 w-full max-w-[280px] tablet:max-w-[350px]"
+              alt="product does not exist."
             />
           )}
           <p className="font-medium text-sm max-w-[280px] tablet:text-basic tablet:max-w-[350px] text-gray-600">

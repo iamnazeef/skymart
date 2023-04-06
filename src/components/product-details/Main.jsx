@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import scrollToTop from "../ScrollToTop";
+import scrollToTop from "../../utils/ScrollToTop";
 import MobileAndTabletView from "./MobileAndTabletView";
 import LaptopAndDesktopView from "./LaptopAndDesktopView";
 

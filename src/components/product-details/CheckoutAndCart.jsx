@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/CartContext";
-import discountedPrice from "../discountedPrice.js";
+import discountedPrice from "../../utils/discountedPrice.js";
 
 const CheckoutAndCart = ({ productDetails, notify }) => {
   const { cartFunctions } = useContext(cartContext);
