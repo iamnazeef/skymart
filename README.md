@@ -2,15 +2,15 @@
 Skymart is an online e-commerce store built with React JS, Tailwind CSS, and JavaScript. It includes features such as add to cart, product detailed view, pagination, search, and more.
 
 ## Technologies used
-> - React JS 
-> - JavaScrpt 
-> - Tailwind CSS 
-> - NPM 
-> - Vite 
-> - Swiper JS 
-> - React Router DOM 
-> - React Hook Form 
-> - Dummy JSON API 
+- React JS 
+- JavaScrpt 
+- Tailwind CSS 
+- NPM 
+- Vite 
+- Swiper JS 
+- React Router DOM 
+- React Hook Form 
+- Dummy JSON API 
 
 ## Live Link
 - [skymart.netlify.app](https://skymart.netlify.app/)
@@ -19,8 +19,8 @@ Skymart is an online e-commerce store built with React JS, Tailwind CSS, and Jav
 
 1. git clone github.com/iamnazeef/skymart-ecommerce-store
 2. cd skymart-ecommerce-store
-3. npm install
-4. npm run dev
+3. ```npm install```
+4. ```npm run dev```
 
 ## Hosting service
 - [Netlify](https://www.netlify.com/)
